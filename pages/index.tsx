@@ -1,9 +1,7 @@
-import type { NextPage } from 'next'
+import type { NextPage } from "next";
 
 const Home: NextPage = () => {
-  return (
-    <h1>Hola mundo desde next</h1> 
-  )
-}
+  return <div className="bg-background min-h-screen"></div>;
+};
 
-export default Home
+export default Home;
