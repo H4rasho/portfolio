@@ -1,11 +1,13 @@
 export default function Welcome() {
   return (
     <>
-      <h1 className="text text-4xl text-text font-bold">Thomas Sepúlveda</h1>
+      <h1 className="text text-4xl text-text font-bold mt-5">
+        Thomas Sepúlveda
+      </h1>
       <img
         src="/img/thomas.jpg"
-        width={200}
-        height={200}
+        width={180}
+        height={180}
         alt="thomas"
         className="rounded-full mt-4"
       />
