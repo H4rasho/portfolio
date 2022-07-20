@@ -9,6 +9,8 @@ module.exports = {
       text: "#edf2f4",
       primary: "#8d99ae",
       secondary: "#d90429",
+      tertiary: "#ef233c",
+      black: "#000",
     },
     extend: {},
   },
