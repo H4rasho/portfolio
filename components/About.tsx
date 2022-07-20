@@ -4,7 +4,7 @@ export default function About() {
       <h2 className="text text-3xl text-background font-extrabold mt-10 ">
         Acerca de Mi
       </h2>
-      <div className="text text-black text-lg font-sans font-normal text-left italic mt-5">
+      <div className="text text-black text-lg font-sans font-normal text-left italic mt-5 leading-6">
         <p>
           Estudié Ingeniería en Informática, y he decido dicarme al mundo del
           sowftware. Empecé con el desarrollo de aplicaciones web y quiero
