@@ -3,6 +3,7 @@ import Head from "next/head";
 import About from "../components/About";
 import IconList from "../components/IconList";
 import NavBar from "../components/ui/NavBar";
+import TimeLine from "../components/ui/TimeLine/TimeLine";
 import Welcome from "../components/Welcome";
 
 const Home: NextPage = () => {
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
           <Welcome />
           <IconList />
           <About />
+          <TimeLine />
         </main>
       </div>
     </>
