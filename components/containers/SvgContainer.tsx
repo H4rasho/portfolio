@@ -1,8 +1,6 @@
-interface SvgContainerProps extends React.AllHTMLAttributes<HTMLElement> {
-  children: React.ReactNode;
-}
+import { ContainerProps } from "./types";
 
-export default function SvgContainer({ children, ...rest }: SvgContainerProps) {
+export default function SvgContainer({ children, ...rest }: ContainerProps) {
   return (
     <div
       className="flex flex-col text-text bg-secondary p-3 rounded-full"

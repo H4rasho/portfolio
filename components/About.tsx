@@ -1,6 +1,8 @@
+import SectionContainer from "./containers/SecctionContainer";
+
 export default function About() {
   return (
-    <div className="bg-primary px-8 py-2 rounded-xl mt-7 shadow-md">
+    <SectionContainer>
       <h2 className="text text-3xl text-background font-extrabold mt-10 ">
         Acerca de Mi
       </h2>
@@ -16,6 +18,6 @@ export default function About() {
         </p>
         <p className="mt-3">H4rasho es mi nombre social</p>
       </div>
-    </div>
+    </SectionContainer>
   );
 }

@@ -1,9 +1,10 @@
+import SectionContainer from "../../containers/SecctionContainer";
 import University from "../../icons/University";
 import TimeLineItem from "./TimeLineItem";
 
 export default function TimeLine() {
   return (
-    <div className="mt-10 p-6 bg-primary rounded-lg text-black">
+    <SectionContainer>
       <h2 className="text-right text-3xl font-extrabold mt-10 ">Trajectoria</h2>
       <ol className="relative border-l border-black mt-8">
         <TimeLineItem
@@ -20,6 +21,6 @@ export default function TimeLine() {
           icon={<University />}
         />
       </ol>
-    </div>
+    </SectionContainer>
   );
 }
