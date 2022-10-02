@@ -9,7 +9,7 @@ export interface CardProps {
 export default function ProjectCard({ name, img, description }: CardProps) {
   return (
     <section className="p-5">
-      <article>
+      <article className="flex flex-col justify-center">
         <Image
           className="bg-contain rounded-xl"
           src={img}
