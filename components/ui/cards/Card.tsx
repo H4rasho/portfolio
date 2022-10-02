@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export interface CardProps {
   name: string;
   img: string;
@@ -8,7 +10,13 @@ export default function ProjectCard({ name, img, description }: CardProps) {
   return (
     <section className="p-5">
       <article>
-        <img className="bg-contain rounded-xl" src={img} />
+        <Image
+          className="bg-contain rounded-xl"
+          src={img}
+          alt={`Proyecto realizaod por H4rasho, sobre ${description}`}
+          width={350}
+          height={350}
+        />
         <div>
           <h3 className="text-2xl font-bold">{name}</h3>
           <p className="py-2">{description}</p>
