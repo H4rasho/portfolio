@@ -8,10 +8,10 @@ export interface CardProps {
 
 export default function ProjectCard({ name, img, description }: CardProps) {
   return (
-    <section className="p-5">
-      <article className="flex flex-col justify-center">
+    <section className="p-8 bg-card rounded-xl">
+      <article className="flex flex-col justify-center max-w-xs">
         <Image
-          className="bg-contain rounded-xl"
+          className="rounded-xl bg-cover"
           src={img}
           alt={`Proyecto realizaod por H4rasho, sobre ${description}`}
           width={350}
@@ -25,7 +25,7 @@ export default function ProjectCard({ name, img, description }: CardProps) {
               href="https://memorice-spacial.vercel.app/"
               className="cursor-pointer"
             >
-              <button className="bg-secondary text-text rounded-lg p-2 w-full text-lg font-bold">
+              <button className="bg-secondary text-black rounded-lg p-2 w-full text-lg font-bold">
                 Demo
               </button>
             </a>

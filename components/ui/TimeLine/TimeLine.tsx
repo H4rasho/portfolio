@@ -5,7 +5,9 @@ import TimeLineItem from "./TimeLineItem";
 export default function TimeLine() {
   return (
     <SectionContainer>
-      <h2 className="text-right text-3xl font-extrabold mt-10 ">Trajectoria</h2>
+      <h2 className="text-right text-3xl font-extrabold mt-10 text-black">
+        Trajectoria
+      </h2>
       <ol className="relative border-l border-black mt-8">
         <TimeLineItem
           title="Titulado de Ingenieria en Informática"

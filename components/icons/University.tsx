@@ -1,6 +1,6 @@
 import { IconProps } from "./types";
 
-const University = ({ fill = "#fff", props }: IconProps) => (
+const University = ({ fill = "#ef233c", props }: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     aria-hidden="true"

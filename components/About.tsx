@@ -3,7 +3,7 @@ import SectionContainer from "./containers/SecctionContainer";
 export default function About() {
   return (
     <SectionContainer>
-      <h2 className="text text-3xl text-background font-extrabold mt-10 ">
+      <h2 className="text text-3xl text-black font-extrabold mt-10 ">
         Acerca de Mi
       </h2>
       <div className="text text-black text-lg font-sans font-normal text-left italic mt-5 leading-6">
