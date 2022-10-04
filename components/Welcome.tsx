@@ -1,10 +1,13 @@
+import Image from "next/image";
+import IconList from "./IconList";
+
 export default function Welcome() {
   return (
     <>
       <h1 className="text text-3xl text-text font-bold mt-5">
         Thomas Sepúlveda
       </h1>
-      <img
+      <Image
         src="/img/thomas.jpg"
         width={180}
         height={180}
@@ -15,6 +18,7 @@ export default function Welcome() {
         Soy desarrollador web fullstack, y este es mi portfolio donde puedes ver
         algunos de mis proyectos.
       </p>
+      <IconList />
     </>
   );
 }

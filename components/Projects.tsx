@@ -12,7 +12,9 @@ const PROJECTS = [
 export default function Projects() {
   return (
     <div>
-      <h2 className="text-right text-3xl font-extrabold mt-10 ">Proyectos</h2>
+      <h2 className="text-right text-3xl font-extrabold mt-10 text-text ">
+        Proyectos
+      </h2>
       <div className="flex gap-2 mt-5 flex-wrap">
         {PROJECTS.map((project) => (
           <Card {...project} key={project.name} />
