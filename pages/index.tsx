@@ -15,9 +15,11 @@ const Home: NextPage = () => {
       </Head>
 
       <NavBar />
-      <main className="flex flex-col justify-center items-center -z-10 container m-auto">
-        <Welcome />
-        <About />
+      <main className="flex flex-col justify-center items-center -z-10 max-w-screen-xl  mx-auto mt-8">
+        <div className="md:flex gap-28">
+          <Welcome />
+          <About />
+        </div>
         <Projects />
         <TimeLine />
         <Footer />

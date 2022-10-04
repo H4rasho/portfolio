@@ -3,8 +3,8 @@ import IconList from "./IconList";
 
 export default function Welcome() {
   return (
-    <>
-      <h1 className="text text-3xl text-text font-bold mt-5">
+    <section className="flex flex-col justify-center items-center">
+      <h1 className="text text-3xl text-center text-text font-bold mt-5 mb-5">
         Thomas Sepúlveda
       </h1>
       <Image
@@ -12,13 +12,13 @@ export default function Welcome() {
         width={180}
         height={180}
         alt="thomas"
-        className="rounded-full mt-4"
+        className="rounded-full mt-10"
       />
       <p className="text text-xl text-text font-light text-center  py-5">
         Soy desarrollador web fullstack, y este es mi portfolio donde puedes ver
         algunos de mis proyectos.
       </p>
       <IconList />
-    </>
+    </section>
   );
 }
