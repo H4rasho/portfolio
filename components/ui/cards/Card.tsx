@@ -8,7 +8,7 @@ export interface CardProps {
 
 export default function ProjectCard({ name, img, description }: CardProps) {
   return (
-    <section className="p-8 bg-card rounded-xl">
+    <section className="p-8 bg-secondary rounded-xl">
       <article className="flex flex-col justify-center max-w-xs">
         <Image
           className="rounded-xl bg-cover"

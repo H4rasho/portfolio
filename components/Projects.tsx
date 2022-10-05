@@ -1,12 +1,7 @@
+import SectionContainer from "./containers/SecctionContainer";
 import Card from "./ui/cards/Card";
 
 const PROJECTS = [
-  {
-    name: "Memorice Spacial",
-    img: "/img/memorice-spacial.png",
-    description:
-      "Juego de memoria basado en el juego Nashor Spacial, con el aprendi lo basico de React",
-  },
   {
     name: "Memorice Spacial",
     img: "/img/memorice-spacial.png",
@@ -29,7 +24,7 @@ const PROJECTS = [
 
 export default function Projects() {
   return (
-    <div className="xl:border border-spacing-2  border-card pb-10 mt-10">
+    <div className="bg-primary mt-10 rounded-xl w-full p-10">
       <h2 className="text-right text-3xl font-extrabold mt-10 text-text mr-10">
         Proyectos
       </h2>

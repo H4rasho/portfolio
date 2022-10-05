@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import About from "../components/About";
 import { Footer } from "../components/Footer";
+import { Mentors } from "../components/Metors";
 import Projects from "../components/Projects";
 import NavBar from "../components/ui/NavBar";
 import TimeLine from "../components/ui/TimeLine/TimeLine";
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
         </div>
         <Projects />
         <TimeLine />
+        <Mentors />
         <Footer />
       </main>
     </>
