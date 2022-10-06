@@ -17,11 +17,16 @@ const MENTORS: Mentor[] = [
     avatar: "/img/Fernando_Herrera.jpg",
     url: "https://fernando-herrera.com/",
   },
+  {
+    name: "Hola Mundo",
+    avatar: "/img/hola_mundo.jpg",
+    url: "https://www.youtube.com/c/HolaMundoDev",
+  },
 ];
 
 export const MentorList = () => {
   return (
-    <div className="flex  gap-5">
+    <div className="gap-5">
       {MENTORS.map(({ name, avatar, url }) => (
         <a
           key={name}
