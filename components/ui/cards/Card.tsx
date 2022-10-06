@@ -25,7 +25,7 @@ export default function ProjectCard({ name, img, description }: CardProps) {
               href="https://memorice-spacial.vercel.app/"
               className="cursor-pointer"
             >
-              <button className="bg-secondary text-black rounded-lg p-2 w-full text-lg font-bold">
+              <button className=" bg-background text-text rounded-lg p-2 w-full text-lg font-bold">
                 Demo
               </button>
             </a>
