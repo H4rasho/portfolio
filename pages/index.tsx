@@ -4,6 +4,7 @@ import About from "../components/About";
 import { Footer } from "../components/Footer";
 import { Mentors } from "../components/Metors";
 import Projects from "../components/Projects";
+import Tecnologies from "../components/Tecnologies";
 import NavBar from "../components/ui/NavBar";
 import TimeLine from "../components/ui/TimeLine/TimeLine";
 import Welcome from "../components/Welcome";
@@ -22,8 +23,11 @@ const Home: NextPage = () => {
           <About />
         </div>
         <Projects />
-        <TimeLine />
-        <Mentors />
+        <Tecnologies />
+        <div className="md:flex gap-2 justify-between">
+          <TimeLine />
+          <Mentors />
+        </div>
         <Footer />
       </main>
     </>
