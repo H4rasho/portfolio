@@ -1,4 +1,3 @@
-import SectionContainer from "./containers/SecctionContainer";
 import Card from "./ui/cards/Card";
 
 const PROJECTS = [
