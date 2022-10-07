@@ -3,7 +3,7 @@ import IconList from "./IconList";
 
 export default function Welcome() {
   return (
-    <section className="flex flex-col justify-center items-center">
+    <section id="welcome" className="flex flex-col justify-center items-center">
       <h1 className="text text-3xl text-center text-text font-bold mt-5 mb-5">
         Thomas Sepúlveda
       </h1>

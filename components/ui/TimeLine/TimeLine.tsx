@@ -4,7 +4,7 @@ import TimeLineItem from "./TimeLineItem";
 
 export default function TimeLine() {
   return (
-    <SectionContainer>
+    <SectionContainer id="experience">
       <div className="px-5">
         <h2 className="text-right text-3xl font-extrabold mt-10 text-black">
           Trajectoria

@@ -24,8 +24,8 @@ const PROJECTS = [
 
 export default function Projects() {
   return (
-    <div className="bg-primary mt-10 rounded-xl w-full p-10">
-      <h2 className="text-center text-4xl font-extrabold text-text font-extrabold">
+    <section id="projects" className="bg-primary mt-10 rounded-xl w-full p-10">
+      <h2 className="text-center text-4xl font-extrabold text-text">
         PROYECTOS
       </h2>
       <div className="flex gap-2 mt-5 flex-wrap justify-center">
@@ -33,6 +33,6 @@ export default function Projects() {
           <Card {...project} key={project.name} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
