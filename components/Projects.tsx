@@ -2,22 +2,29 @@ import Card from "./ui/cards/Card";
 
 const PROJECTS = [
   {
-    name: "Memorice Spacial",
-    img: "/img/memorice-spacial.png",
+    name: "Monogatari Quotes",
+    img: "monogatari-quotes.png",
     description:
-      "Juego de memoria basado en el juego Nashor Spacial, con el aprendi lo basico de React",
+      "Un repositorio de frases de Monogatari Series, con la intencion de aprender a usar Next.js.",
+    demo: "https://monogatari-quotes.vercel.app/",
+    repository: "https://github.com/H4rasho/monogatari-quotes",
   },
   {
     name: "Memorice Spacial",
-    img: "/img/memorice-spacial.png",
+    img: "memorice-spacial.png",
+    demo: "https://memorice-spacial.vercel.app/",
+    repository: "https://github.com/H4rasho/memorice-spacial",
     description:
-      "Juego de memoria basado en el juego Nashor Spacial, con el aprendi lo basico de React",
+      "Juego de memoria basado en el juego Nashor Spacial, con el aprendi lo basico de React.",
   },
   {
-    name: "Memorice Spacial",
-    img: "/img/memorice-spacial.png",
+    name: "Password Generator",
+    img: "password-generator.png",
+    demo: "https://hacktoberfest-2022-git-fork-h4rasho-main-midudev-pro.vercel.app/entry/h4rasho",
+    repository:
+      "https://github.com/H4rasho/password-generator/tree/main/src/components/h4rasho",
     description:
-      "Juego de memoria basado en el juego Nashor Spacial, con el aprendi lo basico de React",
+      "Generador de contraseñas, donde participé por primera vez cotribuyendo a un proyecto open source.",
   },
 ];
 
