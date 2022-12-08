@@ -36,7 +36,7 @@ export default function ProjectCard({
               target="_blank"
               className="cursor-pointer"
             >
-              <button className=" bg-background text-text rounded-lg p-2 w-full text-lg font-bold">
+              <button className=" bg-background hover:bg-primary text-text rounded-lg p-2 w-full text-lg font-bold">
                 Demo
               </button>
             </a>
@@ -44,7 +44,7 @@ export default function ProjectCard({
               href={repository}
               rel="noopener noreferrer"
               target="_blank"
-              className="flex justify-center gap-2 bg-black text-text rounded-lg p-2 w-full text-lg font-bold cursor-pointer"
+              className="flex justify-center gap-2 hover:bg-tertiary bg-black text-text rounded-lg p-2 w-full text-lg font-bold cursor-pointer"
             >
               <svg
                 width={30}
