@@ -1,4 +1,5 @@
 import GitIcon from "./Git";
+import GraphQLIcon from "./Graphql";
 import NestIcon from "./NestIcon";
 import NextIcon from "./NextIcon";
 import NodeIcon from "./Node";
@@ -39,5 +40,9 @@ export const TECNOLOGIES = [
   {
     title: "Testing Library",
     icon: <TestingLibraryIcon />,
+  },
+  {
+    title: "GraphQL",
+    icon: <GraphQLIcon />,
   },
 ];
