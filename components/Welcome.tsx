@@ -14,9 +14,8 @@ export default function Welcome() {
         alt="thomas"
         className="rounded-full mt-10"
       />
-      <p className="text text-xl text-text font-light text-center  py-5">
-        Soy desarrollador web fullstack, y este es mi portfolio donde puedes ver
-        algunos de mis proyectos.
+      <p className="text text-3xl text-text font-semibold text-center  py-5">
+        Full Stack Developer
       </p>
       <IconList />
     </section>
