@@ -16,8 +16,8 @@ const Home: NextPage = () => {
         <title>Thomas Sepúlveda</title>
       </Head>
 
-      <NavBar />
-      <main className="flex flex-col justify-center items-center -z-10 max-w-screen-xl  mx-auto mt-8">
+      <main className="flex flex-col justify-center items-center -z-10 max-w-screen-xl  mx-auto mt-4">
+        <NavBar />
         <div className="md:flex gap-28">
           <Welcome />
           <About />

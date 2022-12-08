@@ -1,10 +1,28 @@
-import { useState } from "react";
+import React, { useState } from "react";
+
+export const Link = ({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) => {
+  return (
+    <a
+      href={href}
+      className="blocktext-white rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white hover:text-tertiary "
+      aria-current="page"
+    >
+      {children}
+    </a>
+  );
+};
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="px-2 sm:px-4 py-2.5 rounded w-full shadow-md text-text">
+    <nav className="px-2 sm:px-4 py-4 rounded w-full text-text mb-6">
       <div className="container flex flex-wrap mx-auto w-full">
         <button
           data-collapse-toggle="navbar-default"
@@ -31,50 +49,24 @@ export default function NavBar() {
           </svg>
         </button>
         <div
-          className={`w-full md:block md:w-auto ${isOpen ? "" : "hidden"}`}
+          className={`w-full md:block ${isOpen ? "" : "hidden"}`}
           id="navbar-default"
         >
-          <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+          <ul className="flex justify-center flex-col mt-2 md:flex-row gap-8 md:mt-0 md:text-xl md:font-medium">
             <li>
-              <a
-                href="#welcome"
-                className="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
-                aria-current="page"
-              >
-                Inicio
-              </a>
+              <Link href="#welcome">Inicio</Link>
             </li>
             <li>
-              <a
-                href="#about"
-                className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >
-                Acerca de mi
-              </a>
+              <Link href="#about">Acerca de mi</Link>
             </li>
             <li>
-              <a
-                href="#experience"
-                className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >
-                Experiencia
-              </a>
+              <Link href="#experience">Experiencia</Link>
             </li>
             <li>
-              <a
-                href="#projects"
-                className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >
-                Proyectos
-              </a>
+              <Link href="#projects">Proyectos</Link>
             </li>
             <li>
-              <a
-                href="#contact"
-                className="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                Contacto
-              </a>
+              <Link href="#contact">Contacto</Link>
             </li>
           </ul>
         </div>
