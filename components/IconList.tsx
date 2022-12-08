@@ -5,9 +5,27 @@ import Twitter from "./icons/Twitter";
 export default function IconList() {
   return (
     <div className="flex justify-center items-center gap-5">
-      <Github fill="#e63946" />
-      <Twitter fill="#e63946" />
-      <Linkedin fill="#e63946" />
+      <a
+        href="https://github.com/H4rasho/"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        <Github fill="#e63946" />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/thomas-sep%C3%BAlveda-torres-b5b963217/"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        <Linkedin fill="#e63946" />
+      </a>
+      <a
+        href="https://twitter.com/H4rasho"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        <Twitter fill="#e63946" />
+      </a>
     </div>
   );
 }
