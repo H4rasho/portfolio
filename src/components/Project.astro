@@ -1,0 +1,38 @@
+---
+import { Image } from "@astrojs/image/components";
+import IconLink from "./IconLink.astro";
+import Github from "./icons/Github.astro";
+import Website from "./icons/Website.astro";
+
+const { image, title, description, repository, web } = Astro.props;
+---
+
+<article
+  class="flex flex-col justify-center mx-auto gap-4 bg-slate-800 rounded-md w-[300px]"
+>
+  <Image
+    src={image}
+    alt="Monogatari Quotes API"
+    width={300}
+    height={300}
+    quality={100}
+    class="rounded-md bg-contain"
+  />
+
+  <h3 class="text-lg text-center font-semibold text-gray-900 dark:text-white">
+    {title}
+  </h3>
+  <p class="text-base p-4 font-normal text-gray-500 dark:text-gray-400">
+    {description}
+  </p>
+  <footer class="flex items-center py-4 px-10 justify-between">
+    <IconLink href={repository}>
+      <Github />
+      <span>Github</span>
+    </IconLink>
+    <IconLink href={web}>
+      <Website />
+      <span>Website</span>
+    </IconLink>
+  </footer>
+</article>
