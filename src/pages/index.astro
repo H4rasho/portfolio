@@ -2,11 +2,12 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from "@astrojs/image/components";
 import thomasImage from "../assets/thomas.jpg";
-import monogatariApiProject from "../assets/monogatari-quotes.webp";
 import Heading from "../components/Heading.astro";
 import ExperiencieTimeLine from "../components/ExperiencieTimeLine.astro";
 import { PROJECTS } from "../data/projects";
 import Project from "../components/Project.astro";
+
+import TechnologyList from "../components/TechnologyList.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -40,6 +41,13 @@ import Project from "../components/Project.astro";
     <section class="flex flex-col gap-4 w-full">
       <Heading title="Projects" />
       {PROJECTS.map((project) => <Project {...project} />)}
+    </section>
+    <section class="flex flex-col gap-4">
+      <Heading title="Technologies" />
+      <TechnologyList />
+    </section>
+    <section>
+      <Heading title="Redes" />
     </section>
   </main>
 </Layout>
