@@ -15,9 +15,9 @@ import IconLink from "../components/IconLink.astro";
 
 <Layout title="Welcome to Astro.">
   <main class="flex flex-col gap-8 items-center">
-    <section class="flex flex-col gap-6">
+    <section class="flex flex-col gap-6 w-full p-8">
       <div class="text-right">
-        <h1 class="text-3xl">Thomas Sepulveda</h1>
+        <h1 class="text-3xl sm:text-5xl font-semibold">Thomas Sepulveda</h1>
         <Heading title="Fullstack Developer" />
       </div>
       <Image
@@ -26,9 +26,10 @@ import IconLink from "../components/IconLink.astro";
         width={300}
         height={300}
         quality={100}
-        class="rounded-full bg-contain"
+        class="rounded-full bg-contain self-center"
       />
     </section>
+
     <section class="flex flex-col gap-4">
       <Heading title="About" />
       <p class="text-xl">
@@ -41,9 +42,11 @@ import IconLink from "../components/IconLink.astro";
       <Heading title="Experience" />
       <ExperiencieTimeLine />
     </section>
-    <section class="grid gap-4">
+    <section class="flex flex-col gap-4 w-full">
       <Heading title="Projects" />
-      {PROJECTS.map((project) => <Project {...project} />)}
+      <div class="grid gap-2 w-full place-items-center">
+        {PROJECTS.map((project) => <Project {...project} />)}
+      </div>
     </section>
     <section class="flex flex-col gap-4 w-full">
       <Heading title="Technologies" />
