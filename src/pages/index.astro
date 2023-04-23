@@ -8,6 +8,9 @@ import { PROJECTS } from "../data/projects";
 import Project from "../components/Project.astro";
 
 import TechnologyList from "../components/TechnologyList.astro";
+import Linkedin from "../components/icons/Linkedin.astro";
+import Github from "../components/icons/Github.astro";
+import IconLink from "../components/IconLink.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -38,16 +41,26 @@ import TechnologyList from "../components/TechnologyList.astro";
       <Heading title="Experience" />
       <ExperiencieTimeLine />
     </section>
-    <section class="flex flex-col gap-4 w-full">
+    <section class="grid gap-4">
       <Heading title="Projects" />
       {PROJECTS.map((project) => <Project {...project} />)}
     </section>
-    <section class="flex flex-col gap-4">
+    <section class="flex flex-col gap-4 w-full">
       <Heading title="Technologies" />
       <TechnologyList />
     </section>
-    <section>
+    <section class="w-full">
       <Heading title="Redes" />
+      <div class="flex p-4 justify-around items-center w-full">
+        <IconLink href="https://github.com/H4rasho">
+          <Github width={50} height={50} />
+        </IconLink>
+        <IconLink
+          href="https://www.linkedin.com/in/thomas-sep%C3%BAlveda-torres-b5b963217/"
+        >
+          <Linkedin />
+        </IconLink>
+      </div>
     </section>
   </main>
 </Layout>
