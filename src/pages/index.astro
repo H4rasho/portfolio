@@ -29,8 +29,7 @@ import IconLink from "../components/IconLink.astro";
         class="rounded-full bg-contain self-center"
       />
     </section>
-
-    <section class="flex flex-col gap-4">
+    <section id="about" class="flex flex-col gap-4">
       <Heading title="About" />
       <p class="text-xl">
         <span class="text-amber-500 font-bold">+2</span> years of experiencie. Work
@@ -38,21 +37,21 @@ import IconLink from "../components/IconLink.astro";
         Improving my software development vision.
       </p>
     </section>
-    <section>
+    <section id="experiencie">
       <Heading title="Experience" />
       <ExperiencieTimeLine />
     </section>
-    <section class="flex flex-col gap-4 w-full">
+    <section id="projects" class="flex flex-col gap-4 w-full">
       <Heading title="Projects" />
       <div class="grid gap-2 w-full place-items-center">
         {PROJECTS.map((project) => <Project {...project} />)}
       </div>
     </section>
-    <section class="flex flex-col gap-4 w-full">
+    <section id="technologies" class="flex flex-col gap-4 w-full">
       <Heading title="Technologies" />
       <TechnologyList />
     </section>
-    <section class="w-full">
+    <section id="contact" class="w-full">
       <Heading title="Redes" />
       <div class="flex p-4 justify-around items-center w-full">
         <IconLink href="https://github.com/H4rasho">
