@@ -10,7 +10,7 @@ export const PROJECTS = [
       "An API for the Monogatari Series, with search and filter options.",
     image: monogatariApiProject,
     repository: "https://github.com/H4rasho/monogatari-quotes",
-    web: "http://monogatari-quotes.vercel.app/",
+    web: "https://monogatari-quotes.vercel.app/",
   },
   {
     id: "rick_and_morty",
