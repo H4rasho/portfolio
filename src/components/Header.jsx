@@ -9,7 +9,7 @@ export default function Header() {
   };
 
   return (
-    <header>
+    <header className="px-7">
       <button className="sm:hidden" onClick={toggleMenu}>
         <Burger />
       </button>

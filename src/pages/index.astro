@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from "@astrojs/image/components";
 import thomasImage from "../assets/thomas.jpg";
+import cv from "../assets/CV-THOMAS.pdf";
 import Heading from "../components/Heading.astro";
 import ExperiencieTimeLine from "../components/ExperiencieTimeLine.astro";
 import { PROJECTS } from "../data/projects";
@@ -14,55 +15,79 @@ import IconLink from "../components/IconLink.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <main class="flex flex-col gap-8 items-center">
-    <section class="flex flex-col gap-6 w-full p-8">
-      <div class="text-right">
+  <main class="flex flex-col items-center">
+    <section class="flex flex-col gap-6 w-full p-8 justify-center items-center">
+      <div class="text-right self-stretch">
         <h1 class="text-3xl sm:text-5xl font-semibold">Thomas Sepulveda</h1>
         <Heading title="Fullstack Developer" />
       </div>
-      <Image
-        src={thomasImage}
-        alt="Thomas Sepulveda"
-        width={300}
-        height={300}
-        quality={100}
-        class="rounded-full bg-contain self-center"
-      />
-    </section>
-    <section id="about" class="flex flex-col gap-4">
-      <Heading title="About" />
-      <p class="text-xl">
-        <span class="text-amber-500 font-bold">+2</span> years of experiencie. Work
-        for the solutions, best practice approach, interest in the code architecture.
-        Improving my software development vision.
-      </p>
-    </section>
-    <section id="experiencie">
-      <Heading title="Experience" />
-      <ExperiencieTimeLine />
-    </section>
-    <section id="projects" class="flex flex-col gap-4 w-full">
-      <Heading title="Projects" />
-      <div class="grid gap-2 w-full place-items-center">
-        {PROJECTS.map((project) => <Project {...project} />)}
+      <div class="flex justify-center gap-x-4">
+        <div class="flex flex-col items-center justify-center gap-4">
+          <IconLink href="https://github.com/H4rasho">
+            <Github width={50} height={50} class="w-10 h-10 sm:w-12 sm:h-12" />
+          </IconLink>
+          <IconLink
+            href="https://www.linkedin.com/in/thomas-sep%C3%BAlveda-torres-b5b963217/"
+          >
+            <Linkedin
+              width={50}
+              height={50}
+              class="w-10 h-10 sm:w-12 sm:h-12"
+            />
+          </IconLink>
+        </div>
+        <Image
+          src={thomasImage}
+          class="rounded-full bg-contain self-center w-48 h-48 sm:w-64 sm:h-64"
+          alt="Thomas Sepulveda"
+          width={450}
+          height={450}
+          quality={100}
+        />
       </div>
-    </section>
-    <section id="technologies" class="flex flex-col gap-4 w-full">
-      <Heading title="Technologies" />
-      <TechnologyList />
-    </section>
-    <section id="contact" class="w-full">
-      <Heading title="Redes" />
-      <div class="flex p-4 justify-around items-center w-full">
-        <IconLink href="https://github.com/H4rasho">
-          <Github width={50} height={50} />
-        </IconLink>
-        <IconLink
-          href="https://www.linkedin.com/in/thomas-sep%C3%BAlveda-torres-b5b963217/"
-        >
-          <Linkedin />
-        </IconLink>
-      </div>
+      <a
+        href={cv}
+        download="Thomas-Sepulveda-CV"
+        class="bg-amber-500 flex justify-center items-center cursor-pointer text-white font-bold py-2 px-4 w-44 rounded-full hover:bg-amber-600 transition duration-300 ease-in-out"
+      >
+        Download CV
+      </a>
+
+      <section id="about" class="flex flex-col gap-4">
+        <Heading title="About" />
+        <p class="text-xl">
+          <span class="text-amber-500 font-bold">+2</span> years of experiencie.
+          Work for the solutions, best practice approach, interest in the code architecture.
+          Improving my software development vision.
+        </p>
+      </section>
+      <section id="experiencie">
+        <Heading title="Experience" />
+        <ExperiencieTimeLine />
+      </section>
+      <section id="projects" class="flex flex-col gap-4 w-full">
+        <Heading title="Projects" />
+        <div class="grid gap-2 w-full place-items-center">
+          {PROJECTS.map((project) => <Project {...project} />)}
+        </div>
+      </section>
+      <section id="technologies" class="flex flex-col gap-4 w-full">
+        <Heading title="Technologies" />
+        <TechnologyList />
+      </section>
+      <section id="contact" class="w-full">
+        <Heading title="Redes" />
+        <div class="flex p-4 justify-around items-center w-full">
+          <IconLink href="https://github.com/H4rasho">
+            <Github width={50} height={50} />
+          </IconLink>
+          <IconLink
+            href="https://www.linkedin.com/in/thomas-sep%C3%BAlveda-torres-b5b963217/"
+          >
+            <Linkedin />
+          </IconLink>
+        </div>
+      </section>
     </section>
   </main>
 </Layout>

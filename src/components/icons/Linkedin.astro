@@ -1,13 +1,18 @@
+---
+const { width = 50, height = 50, ...rest } = Astro.props;
+---
+
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  width={50}
-  height={50}
+  width={width}
+  height={height}
   viewBox="0 0 16 16"
   style={{
     msTransform: "rotate(360deg)",
     WebkitTransform: "rotate(360deg)",
     transform: "rotate(360deg)",
   }}
+  {...rest}
 >
   <path
     fill="currentColor"
