@@ -23,11 +23,12 @@ import IconLink from "../components/IconLink.astro";
       </div>
       <div class="flex justify-center gap-x-4">
         <div class="flex flex-col items-center justify-center gap-4">
-          <IconLink href="https://github.com/H4rasho">
+          <IconLink href="https://github.com/H4rasho" aria-label="Show Github">
             <Github width={50} height={50} class="w-10 h-10 sm:w-12 sm:h-12" />
           </IconLink>
           <IconLink
             href="https://www.linkedin.com/in/thomas-sep%C3%BAlveda-torres-b5b963217/"
+            aria-label="Show Linkedin"
           >
             <Linkedin
               width={50}
@@ -78,10 +79,11 @@ import IconLink from "../components/IconLink.astro";
       <section id="contact" class="w-full">
         <Heading title="Redes" />
         <div class="flex p-4 justify-around items-center w-full">
-          <IconLink href="https://github.com/H4rasho">
+          <IconLink href="https://github.com/H4rasho" aria-label="Show Github">
             <Github width={50} height={50} />
           </IconLink>
           <IconLink
+            aria-label="Show Linkedin"
             href="https://www.linkedin.com/in/thomas-sep%C3%BAlveda-torres-b5b963217/"
           >
             <Linkedin />

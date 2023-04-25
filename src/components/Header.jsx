@@ -10,7 +10,7 @@ export default function Header() {
 
   return (
     <header className="px-7">
-      <button className="sm:hidden" onClick={toggleMenu}>
+      <button className="sm:hidden" onClick={toggleMenu} aria-label="Menu">
         <Burger />
       </button>
       <nav>
