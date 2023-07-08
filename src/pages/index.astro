@@ -15,8 +15,8 @@ import IconLink from "../components/IconLink.astro";
 ---
 
 <Layout title="H4rasho's Website">
-  <main class="flex flex-col items-center">
-    <section class="flex flex-col gap-6 w-full p-8 justify-center items-center">
+  <main class="flex mt-20 flex-col items-center max-w-screen-md">
+    <section class="flex flex-col gap-6 w-full justify-center items-center">
       <div class="text-right self-stretch">
         <h1 class="text-3xl sm:text-5xl font-semibold">Thomas Sepulveda</h1>
         <Heading title="Fullstack Developer" />
@@ -76,7 +76,7 @@ import IconLink from "../components/IconLink.astro";
         <Heading title="Technologies" />
         <TechnologyList />
       </section>
-      <section id="contact" class="w-full">
+      <section id="contact" class="w-full max-sm:mb-28">
         <Heading title="Redes" />
         <div class="flex p-4 justify-around items-center w-full">
           <IconLink href="https://github.com/H4rasho" aria-label="Show Github">

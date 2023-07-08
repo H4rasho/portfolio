@@ -1,5 +1,5 @@
 ---
-import Header from "../components/Header";
+import Header from "../components/Header.astro";
 
 const { title } = Astro.props;
 ---
@@ -14,10 +14,8 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="bg-slate-900 text-white">
-    <div class="grid place-content-center max-w-screen-md m-auto mt-4 p-4">
-      <Header client:only="preact" />
-      <slot />
-    </div>
+  <body class="flex px-4 flex-col items-center bg-slate-900 text-white">
+    <Header />
+    <slot />
   </body>
 </html>
