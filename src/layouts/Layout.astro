@@ -1,21 +1,94 @@
 ---
-import Header from "../components/Header.astro";
+export interface Props {
+  title: string;
+}
 
 const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" class="dark">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="H4rasho's (Thomas Sepulveda) portfolio" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta
+      name="description"
+      content="Thomas Sepúlveda - Full Stack Developer especializado en crear experiencias digitales elegantes y funcionales."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="flex px-4 flex-col items-center bg-slate-900 text-white">
-    <Header />
+  <body class="min-h-screen bg-zinc-950 text-zinc-100 selection:bg-teal-900/30">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm">
+      <div class="max-w-2xl mx-auto px-6 py-6">
+        <nav class="flex justify-between items-center">
+          <div class="text-sm font-medium">
+            <span class="text-teal-400">T</span>S
+          </div>
+          <a
+            href="mailto:thomas@example.com"
+            class="text-sm text-zinc-400 hover:text-teal-400 transition-colors"
+          >
+            Contacto
+          </a>
+        </nav>
+      </div>
+    </header>
+
     <slot />
+
+    <!-- Footer -->
+    <footer class="max-w-2xl mx-auto px-6 py-12 border-t border-zinc-800">
+      <div class="flex justify-between items-center text-sm text-zinc-500">
+        <p>&copy; {new Date().getFullYear()} Thomas Sepúlveda</p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-teal-400 transition-colors"> GitHub</a>
+          <a href="#" class="hover:text-teal-400 transition-colors">
+            LinkedIn
+          </a>
+          <a
+            href="mailto:thomas@example.com"
+            class="hover:text-teal-400 transition-colors"
+          >
+            Email
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Add scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-in");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".fade-in").forEach((el) => {
+        observer.observe(el);
+      });
+    </script>
   </body>
 </html>

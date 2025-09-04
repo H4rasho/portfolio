@@ -1,0 +1,66 @@
+---
+import { ArrowUpRight } from "lucide-astro";
+
+const projects = [
+  {
+    year: "2024",
+    title: "Sistema de Gestión Financiera",
+    description:
+      "Plataforma completa para el manejo de inversiones y análisis de mercado en tiempo real.",
+    tech: "Next.js, TypeScript, PostgreSQL",
+    link: "#",
+  },
+  {
+    year: "2023",
+    title: "E-commerce Minimalista",
+    description:
+      "Tienda online con enfoque en la experiencia del usuario y conversiones optimizadas.",
+    tech: "React, Stripe, Tailwind CSS",
+    link: "#",
+  },
+  {
+    year: "2023",
+    title: "Dashboard Analítico",
+    description:
+      "Herramienta de visualización de datos para equipos de marketing y ventas.",
+    tech: "Vue.js, D3.js, Node.js",
+    link: "#",
+  },
+];
+---
+
+<section id="projects" class="py-20 border-t border-zinc-800">
+  <h2
+    class="text-sm font-medium text-teal-400 mb-12 uppercase tracking-wider fade-in"
+  >
+    Proyectos Seleccionados
+  </h2>
+
+  <div class="space-y-16">
+    {
+      projects.map((project, index) => (
+        <div class="group fade-in" style={`animation-delay: ${index * 100}ms`}>
+          <a href={project.link} class="block">
+            <div class="flex items-start justify-between mb-4">
+              <div class="flex-1">
+                <div class="flex items-center gap-3 mb-2">
+                  <h3 class="text-xl font-medium group-hover:text-teal-400 transition-colors">
+                    {project.title}
+                  </h3>
+                  <ArrowUpRight class="w-4 h-4 text-zinc-500 group-hover:text-teal-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                </div>
+                <p class="text-zinc-400 leading-relaxed mb-3">
+                  {project.description}
+                </p>
+                <p class="text-sm text-zinc-500 font-mono">{project.tech}</p>
+              </div>
+              <div class="text-sm text-zinc-500 font-mono ml-8">
+                {project.year}
+              </div>
+            </div>
+          </a>
+        </div>
+      ))
+    }
+  </div>
+</section>
