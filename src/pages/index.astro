@@ -1,95 +1,22 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import { Image } from "@astrojs/image/components";
-import thomasImage from "../assets/thomas.jpg";
-import cv from "../assets/CV-THOMAS.pdf";
-import Heading from "../components/Heading.astro";
-import ExperiencieTimeLine from "../components/ExperiencieTimeLine.astro";
-import { PROJECTS } from "../data/projects";
-import Project from "../components/Project.astro";
-
-import TechnologyList from "../components/TechnologyList.astro";
-import Linkedin from "../components/icons/Linkedin.astro";
-import Github from "../components/icons/Github.astro";
-import IconLink from "../components/IconLink.astro";
+import Experience from '../components/Experience.astro'
+import Hero from '../components/Hero.astro'
+import Projects from '../components/Projects.astro'
+import Technologies from '../components/Technologies.astro'
+import Layout from '../layouts/Layout.astro'
 ---
 
-<Layout title="H4rasho's Website">
-  <main class="flex mt-20 flex-col items-center max-w-screen-md">
-    <section class="flex flex-col gap-6 w-full justify-center items-center">
-      <div class="text-right self-stretch">
-        <h1 class="text-3xl sm:text-5xl font-semibold">Thomas Sepulveda</h1>
-        <Heading title="Fullstack Developer" />
-      </div>
-      <div class="flex justify-center gap-x-4">
-        <div class="flex flex-col items-center justify-center gap-4">
-          <IconLink href="https://github.com/H4rasho" aria-label="Show Github">
-            <Github width={50} height={50} class="w-10 h-10 sm:w-12 sm:h-12" />
-          </IconLink>
-          <IconLink
-            href="https://www.linkedin.com/in/thomas-sep%C3%BAlveda-torres-b5b963217/"
-            aria-label="Show Linkedin"
-          >
-            <Linkedin
-              width={50}
-              height={50}
-              class="w-10 h-10 sm:w-12 sm:h-12"
-            />
-          </IconLink>
-        </div>
-        <Image
-          src={thomasImage}
-          class="rounded-full bg-contain self-center w-48 h-48 sm:w-64 sm:h-64"
-          alt="Thomas Sepulveda"
-          width={450}
-          height={450}
-          quality={100}
-        />
-      </div>
-      <a
-        href={cv}
-        download="Thomas-Sepulveda-CV"
-        class="bg-amber-500 flex justify-center items-center cursor-pointer text-black font-bold py-2 px-4 w-44 rounded-full hover:bg-amber-600 transition duration-300 ease-in-out"
-      >
-        Download CV
-      </a>
-
-      <section id="about" class="flex flex-col gap-4">
-        <Heading title="About" />
-        <p class="text-xl">
-          <span class="text-amber-500 font-bold">+2</span> years of experiencie.
-          Work for the solutions, best practice approach, interest in the code architecture.
-          Improving my software development vision.
-        </p>
-      </section>
-      <section id="experiencie">
-        <Heading title="Experience" />
-        <ExperiencieTimeLine />
-      </section>
-      <section id="projects" class="flex flex-col gap-4 w-full">
-        <Heading title="Projects" />
-        <div class="grid gap-2 w-full place-items-center">
-          {PROJECTS.map((project) => <Project {...project} />)}
-        </div>
-      </section>
-      <section id="technologies" class="flex flex-col gap-4 w-full">
-        <Heading title="Technologies" />
-        <TechnologyList />
-      </section>
-      <section id="contact" class="w-full max-sm:mb-28">
-        <Heading title="Redes" />
-        <div class="flex p-4 justify-around items-center w-full">
-          <IconLink href="https://github.com/H4rasho" aria-label="Show Github">
-            <Github width={50} height={50} />
-          </IconLink>
-          <IconLink
-            aria-label="Show Linkedin"
-            href="https://www.linkedin.com/in/thomas-sep%C3%BAlveda-torres-b5b963217/"
-          >
-            <Linkedin />
-          </IconLink>
-        </div>
-      </section>
-    </section>
+<Layout title="Thomas Sepúlveda - Full Stack Developer">
+  <main class="max-w-2xl mx-auto px-6">
+    <Hero />
+    <Experience />
+    <Projects />
+    <Technologies />
   </main>
 </Layout>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>

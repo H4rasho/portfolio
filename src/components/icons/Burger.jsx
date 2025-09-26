@@ -6,9 +6,9 @@ export default function Burger() {
       height={30}
       viewBox="0 0 16 16"
       style={{
-        msTransform: "rotate(360deg)",
-        WebkitTransform: "rotate(360deg)",
-        transform: "rotate(360deg)",
+        msTransform: 'rotate(360deg)',
+        WebkitTransform: 'rotate(360deg)',
+        transform: 'rotate(360deg)',
       }}
     >
       <path
@@ -20,5 +20,5 @@ export default function Burger() {
         d="M2.75 12.25h10.5m-10.5-4h10.5m-10.5-4h10.5"
       />
     </svg>
-  );
+  )
 }

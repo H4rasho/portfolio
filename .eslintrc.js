@@ -1,15 +1,15 @@
 module.exports = {
-  extends: ["plugin:astro/recommended", "prettier"],
+  extends: ['plugin:astro/recommended', 'prettier'],
   overrides: [
     {
-      files: ["*.astro"],
+      files: ['*.astro'],
       parserOptions: {
-        extraFileExtensions: [".astro"],
+        extraFileExtensions: ['.astro'],
       },
       rules: {
-        "no-undef": "error",
+        'no-undef': 'error',
       },
     },
     // ...
   ],
-};
+}

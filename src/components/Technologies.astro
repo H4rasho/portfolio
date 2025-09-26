@@ -1,0 +1,49 @@
+---
+import AngularIcon from '../assets/icons/angular.astro'
+import CSharpIcon from '../assets/icons/csharp.astro'
+import DockerIcon from '../assets/icons/docker.astro'
+import GoogleCloudIcon from '../assets/icons/google-cloud.astro'
+import GraphqlIcon from '../assets/icons/graphql.astro'
+import NestIcon from '../assets/icons/nestjs.astro'
+import NextIcon from '../assets/icons/nextjs.astro'
+import NodeIcon from '../assets/icons/nodejs.astro'
+import ReactIcon from '../assets/icons/react.astro'
+import SqlIcon from '../assets/icons/sql.astro'
+
+const technologies = [
+  { name: 'React', icon: ReactIcon },
+  { name: 'Angular', icon: AngularIcon },
+  { name: 'Node.js', icon: NodeIcon },
+  { name: '.NET', icon: CSharpIcon },
+  { name: 'SQL', icon: SqlIcon },
+  { name: 'Google Cloud', icon: GoogleCloudIcon },
+  { name: 'GraphQL', icon: GraphqlIcon },
+  { name: 'Next.js', icon: NextIcon },
+  { name: 'NestJS', icon: NestIcon },
+  { name: 'Docker', icon: DockerIcon },
+]
+---
+
+<section id="technologies" class="py-20 border-t border-zinc-800">
+  <h2 class="text-sm font-medium text-teal-400 mb-12 uppercase tracking-wider fade-in">
+    Tecnologías
+  </h2>
+
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-4 fade-in">
+    {technologies.map((tech, index) => (
+      <div 
+        class="group p-4 border border-zinc-800 rounded-lg hover:border-zinc-700 hover:bg-zinc-900/50 transition-all duration-300 fade-in"
+        style={`animation-delay: ${index * 50}ms`}
+      >
+        <div class="flex items-center gap-3">
+          <div class="w-5 h-5 flex-shrink-0">
+            <tech.icon width={20} height={20} />
+          </div>
+          <span class="text-zinc-300 font-medium group-hover:text-teal-400 transition-colors">
+            {tech.name}
+          </span>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
